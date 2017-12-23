@@ -10,5 +10,5 @@
 #
 
 class Article < ApplicationRecord
-  belongs_to :Userarticles
+  belongs_to :user_article
 end

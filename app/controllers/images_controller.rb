@@ -20,6 +20,7 @@ class ImagesController < ApplicationController
     if @image.save
       render json: @image, status: :created, location: @image
     else
+      p @image.errors
       render json: @image.errors, status: :unprocessable_entity
     end
   end
@@ -46,6 +47,6 @@ class ImagesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def image_params
-      params.fetch(:image, {}).permit(:resource_id, :resource_type, :image)
+      params.fetch(:image, {}).permit(:article_id, :resource_id, :resource_type, :image)
     end
 end

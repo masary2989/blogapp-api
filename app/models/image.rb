@@ -12,5 +12,5 @@
 #
 
 class Image < ApplicationRecord
-#  belongs_to :articles
+  belongs_to :article
 end
