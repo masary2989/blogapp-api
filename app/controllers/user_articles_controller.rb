@@ -1,10 +1,8 @@
 class UserArticlesController < ApplicationController
-  before_action :set_user_article, only: [:show, :update, :destroy]
+  load_and_authorize_resource
 
   # GET /user_articles
   def index
-    @user_articles = UserArticle.all
-
     render json: @user_articles
   end
 
