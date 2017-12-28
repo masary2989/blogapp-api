@@ -8,6 +8,7 @@ class UserArticlesController < ApplicationController
 
   # GET /user_articles/1
   def show
+    @user_article = UserArticle.last
     render json: @user_article
   end
 

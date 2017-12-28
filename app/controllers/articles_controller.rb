@@ -4,12 +4,13 @@ class ArticlesController < ApplicationController
   # GET /articles
   def index
     @articles = Article.all
-
+    # @article = Article.find_by(user_article_id: params[:user_article_id])
     render json: @articles
   end
 
   # GET /articles/1
   def show
+    @article = Article.find_by(user_article_id: params[:user_article_id])
     render json: @article
   end
 
