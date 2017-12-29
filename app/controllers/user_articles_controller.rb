@@ -11,6 +11,11 @@ class UserArticlesController < ApplicationController
     @user_article = UserArticle.last
     render json: @user_article
   end
+  
+  # GET /user_articles/1/viewarticle
+  def viewarticle
+    render json: @user_article
+  end
 
   # POST /user_articles
   def create
